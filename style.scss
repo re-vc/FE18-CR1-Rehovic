@@ -2,3 +2,73 @@
 @import "./colorstack";
 @import "./nav";
 
+header {
+    position: sticky;
+    top: -39px;
+    z-index: 99;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 8rem;
+
+    * {
+        margin: 0 1rem;
+    }
+
+    span {
+        padding: 17px 1rem;
+    }
+
+    span:hover {
+        background-color: $primary;
+        color: $secondary;
+    }
+}
+
+nav {
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+}
+
+.navbg {
+    position: fixed;
+    top: 0;
+    z-index: 98;
+
+    background-color: $maincolor;
+    height: 51px;
+    width: 100%;
+}
+
+@media screen and (max-width: "1000px") {
+    nav {
+        background-color: $maincolor;
+    }
+}
+
+@media screen and (min-width: "650px") and (max-width: "1500px") {
+    nav {
+        background-color: none;
+    }
+    nav > ul > li > a {
+        padding: 1rem 1rem;
+    }
+}
+
+@media screen and (min-width: "450px") and (max-width: "650px") {
+    nav > ul > li > a {
+        padding: 1rem 0.25rem;
+    }
+}
+
+@media screen and (max-width: "450px") {
+    nav > ul > li > a {
+        display: none;
+    }
+    .burger {
+        display: inline;
+    }
+}
+// screen smaller than 250px breaks the site

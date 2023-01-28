@@ -1,23 +1,19 @@
-nav {    
-    height: 3rem;
-    background-color: $maincolor;
-    margin-bottom: .2em;
+nav {
+    // background-color: $maincolor;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 
     ul {
         text-align: center;
 
-        li {          
+        li {
             display: inline-block;
 
-            .borger {
-                display: none;
-            }
-
             a {
-                padding: 0.9rem 4rem;
-                line-height: 3rem;
+                padding: 1rem 3rem;
+                line-height: 51px;
                 text-decoration: none;
-                background-color: $maincolor;
                 color: $primary;
                 &:hover {
                     background-color: $primary;
@@ -26,4 +22,8 @@ nav {
             }
         }
     }
+}
+
+.burger {
+    display: none;
 }
