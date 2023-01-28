@@ -42,6 +42,71 @@ nav {
     width: 100%;
 }
 
+footer {
+    background-color: $primary;
+    padding-top: 2rem;
+    height: 8rem;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+
+        li {
+            color: $secondary;
+            a {
+                text-decoration: none;
+                color: $secondary;
+                &:hover {
+                    background-color: $secondary;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    text-align: center;
+    margin: 1rem;
+    color: $secondary;
+}
+
+.fa-brands {
+    color: $secondary;
+}
+
+main {
+    width: 80%;
+    margin: 2rem auto;
+
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 3%;
+
+    div {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+        .overlay {
+            background-color: rgba($color: $primary, $alpha: 0.5);
+            color: $secondary;
+
+            text-align: center;
+            width: 100%;
+            padding: 10% 0;
+
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
 @media screen and (max-width: "1000px") {
     nav {
         background-color: $maincolor;
@@ -61,6 +126,11 @@ nav {
     nav > ul > li > a {
         padding: 1rem 0.25rem;
     }
+    main {
+        width: 100%;
+        grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+        gap: 1% 2%;
+    }
 }
 
 @media screen and (max-width: "450px") {
@@ -70,5 +140,13 @@ nav {
     .burger {
         display: inline;
     }
+    header > * {
+        margin: 0;
+    }
+    main {
+        width: 100%;
+        grid-template: repeat(9, 1fr) / repeat(1, 1fr);
+        gap: 1%;
+    }
 }
-// screen smaller than 250px breaks the site
+// screen smaller than 315px breaks the site
